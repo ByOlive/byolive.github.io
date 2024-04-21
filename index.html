@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +10,46 @@
 <p>UNDER MAINTENANCE</p>
 </body>
 </html>
+-->
 
-<!-- google.com, pub-7335545520550263, DIRECT, f08c47fec0942fa0 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecting...</title>
+<script>
+// Countdown and redirect function
+function countdownRedirect(seconds) {
+    var countdownDisplay = document.getElementById('countdown');
+    countdownDisplay.textContent = seconds;
+
+    // Decrement the seconds and redirect when it reaches 0
+    var countdownInterval = setInterval(function() {
+        seconds--;
+        countdownDisplay.textContent = seconds;
+        if (seconds <= 0) {
+            clearInterval(countdownInterval);
+            redirectToAnotherWebsite();
+        }
+    }, 1000);
+}
+
+// Redirect function
+function redirectToAnotherWebsite() {
+    // Replace "http://example.com" with the URL you want to redirect to
+    window.location.href = "https://byoliveapps.wordpress.com/";
+}
+
+// Call the function to initiate the countdown and redirect
+countdownRedirect(3);
+</script>
+</head>
+<body>
+<p>Redirecting in <span id="countdown"></span> seconds...</p>
+<p>If you are not redirected, please <a href="https://byoliveapps.wordpress.com/">click here</a>.</p>
+</body>
+</html>
 
 <!--
 <!DOCTYPE html>
